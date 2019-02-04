@@ -8,7 +8,7 @@ import { getDownloadLink } from "../../../Environment/env";
 const SinglePost = props => {
   return (
     <div className="post">
-      <Link to={`post/${props.post.id}`}>
+      <Link to={`/post/${props.post.id}`}>
         <div className="mask" />
         <div className="likes-wrapper">
           <i className="material-icons">favorite</i>

@@ -10,6 +10,22 @@ export class DetailPost extends Component {
     post: null
   };
 
+  getCoeficient = () => {
+    if (this.state.post.height / 4 <= window.innerHeight - 150) {
+      return 4;
+    } else {
+      if (this.state.post.height / 5 <= window.innerHeight - 150) {
+        return 4;
+      } else {
+        if (this.state.post.height / 6 <= window.innerHeight - 150) {
+          return 6;
+        } else {
+          return 8;
+        }
+      }
+    }
+  };
+
   closeHandler = () => {
     if (this.props.history.length > 1) {
       this.props.history.goBack();
@@ -58,9 +74,13 @@ export class DetailPost extends Component {
               </div>
             </div>
             <img
+              style={{
+                width: this.state.post.width / this.getCoeficient(),
+                height: this.state.post.height / this.getCoeficient()
+              }}
               alt={this.state.post.description}
               className="mainPhoto"
-              src={this.state.post.urls.full}
+              src={this.state.post.urls.regular}
             />
             <div className="bottom-container">
               <span>user</span>
@@ -70,15 +90,14 @@ export class DetailPost extends Component {
           </div>
         ) : (
           <Spinner />
-)}
+        )}
       </div>
     );
   }
 
   componentDidMount = () => {
-    Axios.get(getLinkToPost(this.props.match.params.id)).then(resp =>
-      this.setState({ post: resp.data })
-    );
+    Axios.get(getLinkToPost(this.props.match.params.id))
+      .then(resp => this.setState({ post: resp.data }))
   };
 }
 

@@ -3,7 +3,7 @@
     display: block;
     position: relative;
     height: 25vw;
-    box-shadow: 0 4px 12px rgba(0,0,0,.08), 0 0 1px rgba(1,0,0,.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .08), 0 0 1px rgba(1, 0, 0, .1);
 }
 
 .post:hover .likes-wrapper,
@@ -76,10 +76,25 @@ img {
     left: 10%;
     display: none;
 }
-.time{
+
+.time {
     font-size: .7em;
 }
+
 .download-wrapper:hover,
 .likes-wrapper:hover {
     background: #fff;
+}
+
+@media only screen and (max-width: 900px) {
+    .post {
+        width: 35vw;
+        height: 25vh;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .post {
+        width: 55vw;
+    }
 }

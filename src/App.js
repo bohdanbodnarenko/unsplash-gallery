@@ -11,11 +11,13 @@ class App extends Component {
     return (
       <div>
         <Header/>
-        <Switch>
-          <Route path='/search/:query'  component={SearchLayout} />
-          <Route path='/post/:id'  component={DetailPost} />
-          <Route path='/'  component={HomeLayout} />
-        </Switch>
+        <div style={{paddingTop:'16vh'}}>
+          <Switch>
+            <Route path='/search/:query'  component={SearchLayout} />
+            <Route path='/post/:id'  component={DetailPost} />
+            <Route path='/'  component={HomeLayout} />
+          </Switch>
+        </div>
         {/* <Route path='/' component={HomeLayout} /> */}
       </div>
     );

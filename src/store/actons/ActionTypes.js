@@ -1,1 +1,2 @@
-export const SET_POSTS = 'SET_POSTS';
+export const SET_HOME_POSTS = 'SET_HOME_POSTS';
+export const SET_SEARCH_POSTS = 'SET_SEARCH_POSTS';

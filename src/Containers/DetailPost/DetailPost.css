@@ -10,8 +10,8 @@
 }
 
 .mainPhoto {
-    max-width: 50%;
-    max-height: 80vh;
+    /* max-width: 60vw; */
+    /* max-height: 80vh; */
     margin: auto;
 }
 
@@ -41,7 +41,9 @@
 }
 
 .user-img {
-    width: 30%;
+    height: 35px;
+    width: 35px;
+    vertical-align: middle;
     border-radius: 25px;
 }
 
@@ -55,6 +57,10 @@
     font-size: .7em;
     display: block;
 }
+.likes-container span,
+.download-container span{
+    padding-top: 3%;
+}
 
 .likes-container {
     padding: 5px;
@@ -64,6 +70,7 @@
     border-radius: 7px;
     margin: 0 10px;
     cursor: pointer;
+    text-align: center;
 }
 
 .download-container{

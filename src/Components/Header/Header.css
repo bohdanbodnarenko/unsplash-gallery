@@ -4,7 +4,8 @@ header {
     height: 16vh;
     min-height: 80px;
     box-shadow: 0 4px 12px rgba(0,0,0,.08), 0 0 1px rgba(1,0,0,.1);
-    position: relative;
+    position: fixed;
+    top:0;
     z-index: 10;
 }
 
