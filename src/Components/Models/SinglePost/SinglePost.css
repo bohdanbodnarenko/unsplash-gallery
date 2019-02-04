@@ -1,0 +1,85 @@
+.post {
+    margin: 2.5%;
+    display: block;
+    position: relative;
+    height: 25vw;
+    box-shadow: 0 4px 12px rgba(0,0,0,.08), 0 0 1px rgba(1,0,0,.1);
+}
+
+.post:hover .likes-wrapper,
+.post:hover .download-wrapper {
+    display: flex;
+}
+
+.post:hover .mask,
+.post:hover .user-wrapper {
+    display: block;
+}
+
+.likes-wrapper {
+    position: absolute;
+    text-align: center;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+    background-color: hsla(0, 0%, 100%, .85);
+    height: 5.5%;
+    top: 3%;
+    right: 7%;
+    color: #777;
+    border-radius: 5px;
+    z-index: 4;
+    min-height: 35px;
+    padding: 0 10px
+}
+
+img {
+    z-index: 2;
+    border: 15px;
+    width: 100%;
+    height: 100%;
+}
+
+.mask {
+    background-color: rgba(0, 0, 0, .6);
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: absolute;
+    transition: ease-in 2s;
+}
+
+.likes-wrapper>i {
+    color: rgba(240, 38, 38, 0.8);
+}
+
+.download-wrapper {
+    color: #777;
+    position: absolute;
+    bottom: 7%;
+    right: 10%;
+    background-color: hsla(0, 0%, 100%, .85);
+    width: 12%;
+    display: none;
+    justify-content: center;
+    border-radius: 5px;
+    z-index: 4;
+}
+
+.user-wrapper {
+    color: #fff;
+    z-index: 3;
+    position: absolute;
+    bottom: 7%;
+    left: 10%;
+    display: none;
+}
+.time{
+    font-size: .7em;
+}
+.download-wrapper:hover,
+.likes-wrapper:hover {
+    background: #fff;
+}
