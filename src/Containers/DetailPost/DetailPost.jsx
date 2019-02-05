@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 
 import Axios from "axios";
 import "./DetailPost.css";
@@ -15,7 +15,7 @@ export class DetailPost extends Component {
       return 4;
     } else {
       if (this.state.post.height / 5 <= window.innerHeight - 150) {
-        return 4;
+        return 5;
       } else {
         if (this.state.post.height / 6 <= window.innerHeight - 150) {
           return 6;
@@ -34,6 +34,9 @@ export class DetailPost extends Component {
     }
   };
   render() {
+    try {
+      console.log(this.state.post.width);
+    } catch {}
     return (
       <div className="backdrop" onClick={this.closeHandler}>
         {this.state.post ? (
@@ -74,10 +77,18 @@ export class DetailPost extends Component {
               </div>
             </div>
             <img
-              style={{
-                width: this.state.post.width / this.getCoeficient(),
-                height: this.state.post.height / this.getCoeficient()
-              }}
+            //TODO max width to window
+              style={
+                this.state.post.width > 8000
+                  ? {
+                      width: this.state.post.width / 8,
+                      height: this.state.post.height / 8,
+                    }
+                  : {
+                      width: this.state.post.width / this.getCoeficient(),
+                      height: this.state.post.height / this.getCoeficient()
+                    }
+              }
               alt={this.state.post.description}
               className="mainPhoto"
               src={this.state.post.urls.regular}
@@ -96,8 +107,9 @@ export class DetailPost extends Component {
   }
 
   componentDidMount = () => {
-    Axios.get(getLinkToPost(this.props.match.params.id))
-      .then(resp => this.setState({ post: resp.data }))
+    Axios.get(getLinkToPost(this.props.match.params.id)).then(resp =>
+      this.setState({ post: resp.data })
+    );
   };
 }
 
