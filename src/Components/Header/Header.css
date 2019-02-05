@@ -26,6 +26,7 @@ input{
     padding-left: 3%;
     color: #111;
     margin-bottom: 10px;
+    transition: .5ms ;
 }
 
 nav{

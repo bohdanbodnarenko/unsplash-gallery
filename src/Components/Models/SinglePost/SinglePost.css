@@ -31,7 +31,7 @@
     border-radius: 5px;
     z-index: 4;
     min-height: 35px;
-    padding: 0 10px
+    padding: 0 10px;
 }
 
 img {
@@ -97,4 +97,15 @@ img {
     .post {
         width: 55vw;
     }
+}
+
+.postAnimation-appear {
+    opacity: 0.01;
+    transform: translateY(100%);
+}
+
+.postAnimation-appear.postAnimation-appear-active {
+    transform: translateX(0%);
+    opacity: 1;
+    transition: .6s ease-in-out;
 }

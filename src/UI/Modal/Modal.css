@@ -1,0 +1,21 @@
+.contentAnimation-appear {
+    opacity: 0.01;
+    transform: translateY(-100%);
+}
+
+.contentAnimation-leave {
+    opacity: 0.01;
+    transform: translateY(-100%);
+}
+
+.contentAnimation-appear.contentAnimation-appear-active {
+    transform: translateX(0%);
+    opacity: 1;
+    transition: .4s ease-in-out;
+}
+
+.contentAnimation-leave.contentAnimation-leave-active {
+    transform: translateX(0%);
+    opacity: 1;
+    transition: 3000ms ease-in;
+  }

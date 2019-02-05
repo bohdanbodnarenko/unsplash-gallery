@@ -22,13 +22,33 @@ section {
     background: #fff;
 }
 
-.greet-wrapper{
+.greet-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 @media only screen and (max-width: 900px) {
-    .section-input {
-    }
+    .section-input {}
+}
+
+.carousel-appear {
+    opacity: 0.01;
+    transform: translateX(-100%);
+}
+
+.carousel-appear.carousel-appear-active {
+    transform: translateX(0%);
+    opacity: 1;
+    transition: .6s ease-in;
+}
+.formAnimation-appear {
+    opacity: 0.01;
+    transform: translateX(200%)
+}
+
+.formAnimation-appear.formAnimation-appear-active {
+    transform: translateX(0%);
+    opacity: 1;
+    transition: .6s ease-in;
 }
