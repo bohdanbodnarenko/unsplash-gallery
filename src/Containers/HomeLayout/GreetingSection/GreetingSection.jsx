@@ -1,5 +1,4 @@
 import React from "react";
-import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 
 import "./GreetingSection.css";
 
@@ -11,22 +10,12 @@ const GreetingSection = props => {
     color = "black";
   }
   return (
-    <ReactCSSTransitionGroup
-      transitionName="carousel"
-      transitionAppear
-      transitionEnter
-    >
       <section
         style={{
           backgroundImage: `url(${props.post.urls.full})`,
           color: color
         }}
       >
-        <ReactCSSTransitionGroup
-          transitionName="formAnimation"
-          transitionAppear
-          transitionEnter
-        >
           <div className="greet-wrapper">
             <h1>Unsplash Gallery Appp</h1>
             <p>
@@ -41,9 +30,7 @@ const GreetingSection = props => {
               />
             </form>
           </div>
-        </ReactCSSTransitionGroup>
       </section>
-    </ReactCSSTransitionGroup>
   );
 };
 

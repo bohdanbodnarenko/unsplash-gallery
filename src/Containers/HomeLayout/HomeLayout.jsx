@@ -51,9 +51,7 @@ export class HomeLayout extends Component {
         this.props.getPosts(30);
         this.setState({
           ...this.state,
-          randomPost: this.props.posts.filter(
-            post => post.width > 4000
-          )[0]
+          randomPost: this.props.posts.filter(post => post.width > 4000)[0]
         });
       });
   };

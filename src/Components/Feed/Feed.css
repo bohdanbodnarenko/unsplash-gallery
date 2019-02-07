@@ -1,16 +1,16 @@
 section {
-    /* width: 100vw; */
-    display: flex;
-    flex-wrap: wrap;
-    align-content: space-between;
-    justify-content: center;
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: center;
 }
 
 .example-appear {
-    opacity: 0.01;
-  }
-  
-  .example-appear.example-appear-active {
-    opacity: 1;
-    transition: opacity .5s ease-in;
-  }
+  opacity: 0.01;
+}
+
+.example-appear.example-appear-active {
+  opacity: 1;
+  transition: opacity .5s ease-in;
+}

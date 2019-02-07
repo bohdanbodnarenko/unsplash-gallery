@@ -8,37 +8,20 @@ const Box = posed.div({
   init: { scale: 1 },
   press: { scale: 0.8 }
 });
-export class NavBar extends Component {
-  state = {
-    categories: [
-      "Wallpapers",
-      "Textures",
-      "Nature",
-      "Architecture",
-      "Business",
-      "Travel",
-      "Fashion",
-      "Food",
-      "People",
-      "Health",
-      "Arts"
-    ]
-  };
-  render() {
-    const links = this.state.categories.map(link => (
-      <NavLink key={link} to={`/search/${link}`}>
-        <Box>{link}</Box>
+const NavBar = (props) => {
+  const links = props.categories.map(link => (
+    <NavLink key={link} to={`/search/${link}`}>
+      <Box>{link}</Box>
+    </NavLink>
+  ));
+  return (
+    <nav>
+      <NavLink exact to="/">
+        HOME
       </NavLink>
-    ));
-    return (
-      <nav>
-        <NavLink exact to="/">
-          HOME
-        </NavLink>
-        {links}
-      </nav>
-    );
-  }
-}
+      {links}
+    </nav>
+  );
+};
 
 export default NavBar;

@@ -11,7 +11,7 @@ class App extends Component {
     return (
       <div>
         <Header/>
-        <div style={{paddingTop:'16vh'}}>
+        <div style={{position:'relative'}}>
           <Switch>
             <Route path='/search/:query'  component={SearchLayout} />
             <Route path='/post/:id'  component={DetailPost} />
